@@ -16,6 +16,10 @@ const Search = ({ hideButtons = false }) => {
   const searchHandler = (event) => {
     event.preventDefault();
 
+    if (inputValue.trim() === "") {
+      return;
+    }
+
     console.log("Input button >> ", inputValue);
 
     dispatch({
